@@ -1,0 +1,477 @@
+*Student_ Table
+
+Student_ID
+First_Name
+Last_Name
+Student_Email
+Student_Telephone
+Project_ID= *Let's see if it can use the student ID as the Primary_key
+Supervisor_ID
+Coding Languages_Specialize_In
+Coding_Experience
+Department_ID
+Course_Code
+Project_Type(Research, Practical)
+Project_Description
+Project_Documentation
+
+
+
+
+
+*Project_Table
+
+Project_ID(I don't know if i can use the Student_ID as the primary key)
+Student_ID
+Project_Upload_Date
+Assigned_Supervisor
+Supervisor_ID
+Project_Type(Research, Practical)
+Project_Description
+Project_Documentation
+
+
+
+*Department_Table
+
+Department_ID
+Course_Code
+Student_ID
+Supervisor_ID
+Researcher_ID
+
+
+*Researcher_Table 
+
+Researcher_ID
+Department_ID
+First_Name
+Middle_Name
+Last_Name
+
+
+
+
+
+*Supervisor_Table
+
+Supervisor_ID
+Department_ID
+First_Name
+Middle_Name
+Last_Name
+Students_ID
+Project_ID
+Course_Code
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Student Table
+
+Student_ID (Primary Key): Integer, Auto-increment (assuming this is the primary key)
+First_Name: VARCHAR(255) - You can adjust the size based on the maximum expected length of first names.
+Last_Name: VARCHAR(255) - Similar to First_Name, adjust based on the maximum expected length.
+Student_Email: VARCHAR(255) - Adjust the size based on email length.
+Student_Telephone: VARCHAR(20) - Adjust for the maximum expected phone number length.
+Coding_Languages_Specialize_In: VARCHAR(255) - Store a comma-separated list or create a separate table if there are multiple values.
+Coding_Experience: VARCHAR(255) - Similar to Coding_Languages_Specialize_In.
+Department_ID (Foreign Key): Integer - References Department_Table.
+Course_Code (Foreign Key): VARCHAR(20) - References Course_Table if needed.
+Project_Type: ENUM('Research', 'Practical') - Limit values to 'Research' or 'Practical'.
+Project_Description: TEXT - Suitable for longer descriptions.
+Project_Documentation: TEXT - Suitable for storing project documentation.
+
+
+*Project Table
+
+Project_ID (Primary Key): Integer, Auto-increment (assuming this is the primary key)
+Student_ID (Foreign Key): Integer - References Student_Table.
+Project_Upload_Date: DATE or DATETIME - Depending on whether you need to store just the date or also the time.
+Assigned_Supervisor (Foreign Key): Integer - References Supervisor_Table.
+Supervisor_ID (Foreign Key): Integer - References Supervisor_Table.
+Project_Type: ENUM('Research', 'Practical') - Same as in the Student Table.
+Project_Description: TEXT - Same as in the Student Table.
+Project_Documentation: TEXT - Same as in the Student Table.
+
+
+*Department Table
+
+Department_ID (Primary Key): Integer, Auto-increment (assuming this is the primary key)
+Department_Name: VARCHAR(255) - Adjust the size based on the maximum expected length.
+Course_Code (Foreign Key): VARCHAR(20) - References Course_Table if needed.
+
+
+*Course Table
+
+Course_Code (Primary Key): VARCHAR(20) - Adjust the size based on the maximum expected course code length.
+Course_Name: VARCHAR(255) - Adjust the size based on the maximum expected length.
+
+
+*Researcher Table
+
+Researcher_ID (Primary Key): Integer, Auto-increment (assuming this is the primary key)
+First_Name: VARCHAR(255) - Adjust the size based on the maximum expected length.
+Middle_Name: VARCHAR(255) - Adjust the size based on the maximum expected length.
+Last_Name: VARCHAR(255) - Adjust the size based on the maximum expected length.
+Department_ID (Foreign Key): Integer - References Department_Table.
+
+
+*Supervisor Table
+
+Supervisor_ID (Primary Key): Integer, Auto-increment (assuming this is the primary key)
+First_Name: VARCHAR(255) - Adjust the size based on the maximum expected length.
+Middle_Name: VARCHAR(255) - Adjust the size based on the maximum expected length.
+Last_Name: VARCHAR(255) - Adjust the size based on the maximum expected length.
+Students_ID: Integer - Assuming you want to associate multiple students with a supervisor.
+Project_ID: Integer - Assuming you want to associate multiple projects with a supervisor.
+Course_Code (Foreign Key): VARCHAR(20) - References Course_Table if needed.
+
+
+*Student_Supervisor Table
+
+ID (Primary Key): Integer, Auto-increment (assuming this is the primary key)
+Student_ID (Foreign Key): Integer - References Student_Table.
+Supervisor_ID (Foreign Key): Integer - References Supervisor_Table.
+
+
+*Project_Supervisor Table
+
+ID (Primary Key): Integer, Auto-increment (assuming this is the primary key)
+Project_ID (Foreign Key): Integer - References Project_Table.
+Supervisor_ID (Foreign Key): Integer - References Supervisor_Table.
+
+
+*Project_Review Table
+
+Review_ID (Primary Key): Integer, Auto-increment (assuming this is the primary key)
+Project_ID (Foreign Key): Integer - References Project_Table.
+Reviewer_ID (Foreign Key): Integer - References Supervisor_Table (or another table for reviewers).
+Review_Date: DATE or DATETIME - Depending on whether you need to store just the date or also the time.
+Review_Comments: TEXT - Suitable for longer comments.
+
+
+
+*Document_Upload Table
+
+Upload_ID (Primary Key): Integer, Auto-increment (assuming this is the primary key)
+Project_ID (Foreign Key): Integer - References Project_Table.
+Document_Name: VARCHAR(255) - Adjust the size based on the maximum expected length.
+Document_URL: VARCHAR(255) - Store URLs as strings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(Temporary Fix For)
+*Login_Tabele
+
+Email
+Password
+
+
+
+*Users_Table
+
+Users_ID(Let's see if we can link it to the Students, Supervisor And Researchers)
+Users_Priviledges_ID
+Users_Password
+
+
+
+*Users_Priviledges_Table
+
+Users_Priviledges_ID
+Users_Priviledges_Description
+
+
+
+	
+sixteen47ghana.com
+mail.sixteen47ghana.com
+www.sixteen47ghana.com
+cpanel.sixteen47ghana.com
+webmail.sixteen47ghana.com
+webdisk.sixteen47ghana.com
+cpcontacts.sixteen47ghana.com
+cpcalendars.sixteen47ghana.com
+autodiscover.sixteen47ghana.com
+
+
+Adminstrator Username
+2x11vi
+
+Administrator Password
+?cN#VepMyqE9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Research Documentation Format Template:**
+
+*Title Page:*
+- Title of the Research
+- Author(s) Name(s)
+- Date of Submission
+- Institutional Affiliation (if applicable)
+- Abstract (Brief summary of the research)
+
+*Table of Contents:*
+- List of Sections and Subsections with Page Numbers
+
+**Section 1: Introduction**
+- Purpose of the Research
+- Research Objectives
+- Background Information
+
+**Section 2: Literature Review**
+- Review of Relevant Literature
+- Identification of Research Gaps
+
+**Section 3: Research Methodology**
+- Research Design
+- Data Collection Methods
+- Data Analysis Techniques
+- Ethical Considerations (if applicable)
+
+**Section 4: Results**
+- Presentation of Research Findings
+- Use Tables, Charts, and Graphs for Clarity
+
+**Section 5: Discussion**
+- Interpretation of Results
+- Comparison with Literature
+- Implications and Significance of Findings
+
+**Section 6: Conclusion**
+- Summary of Key Findings
+- Conclusion and Recommendations
+
+**Section 7: References**
+- List of Citations in a Standard Format (e.g., APA, MLA)
+
+**Appendices (if applicable)**
+- Include Supplementary Material (e.g., Questionnaires, Raw Data)
+
+
+
+
+
+
+
+
+
+**Project Documentation Format Template:**
+
+*Title Page:*
+- Title of the Project
+- Project Team Members
+- Date of Completion
+- Institutional Affiliation (if applicable)
+- Abstract (Brief summary of the project)
+
+*Table of Contents:*
+- List of Sections and Subsections with Page Numbers
+
+**Section 1: Introduction**
+- Purpose of the Project
+- Project Objectives
+- Background Information
+
+**Section 2: Project Scope and Planning**
+- Project Scope Statement
+- Project Schedule
+- Resource Allocation
+
+**Section 3: Project Design and Implementation**
+- System Architecture
+- Design Diagrams (e.g., Flowcharts, UML Diagrams)
+- Development Tools and Technologies Used
+
+**Section 4: Project Execution**
+- Detailed Description of How the Project Was Implemented
+- Challenges Encountered and Solutions
+
+**Section 5: Testing and Quality Assurance**
+- Description of Testing Procedures
+- Test Results
+- Quality Control Measures
+
+**Section 6: Results and Deliverables**
+- Presentation of Project Outcomes
+- Screenshots, Images, or Examples
+
+**Section 7: Conclusion and Future Work**
+- Summary of Key Achievements
+- Lessons Learned
+- Future Enhancements or Developments
+
+**Section 8: References**
+- List of Sources Used in the Project
+
+**Appendices (if applicable)**
+- Include Supplementary Material (e.g., Code Snippets, User Manuals)
+
+**Formatting Guidelines:**
+
+- Use a standard font and font size (e.g., Times New Roman, 12pt).
+- Maintain consistent formatting for headings, subheadings, and body text.
+- Use bullet points and numbered lists for clarity.
+- Include page numbers in the footer or header.
+- Use a consistent citation style (e.g., APA, MLA) for references.
+- Include a cover page with essential project/research details.
+- Use clear and concise language, avoiding jargon when possible.
+- Ensure all images, charts, and diagrams are labeled and referenced in the text.
+
+You can create these templates using word processing software like Microsoft Word or Google Docs, and customize them to fit the specific requirements of your research or project documentation. These templates will help ensure your documentation is well-structured and organized.
+
+
+
+
+
+
+
+<div className='col-span-12 xl:col-span-8'>
+          <div className='flex flex-col gap-9'>
+            <div className='rounded-sm border border-LegonContainer bg-white shadow-default'>
+              <div className='border-b border-LegonGold py-4 px-6.5'>
+                <h3 className='font-medium text-black text-center'>
+                  Another One Bites The Dust
+                </h3>
+              </div>
+
+              <form action='#'>
+                  <div className='p-6.5'>
+                    
+                      <div className='mb-2.5 block  text-LegonText'>
+                        <label className='mb-2.5 block font-medium text-black '>Something</label>
+                        <input type='text' placeholder='Something' className='w-full rounded border-[1.5px] bg-transparent py-3 px-5 font-medium outline-none transition focus:border-LegonGold active:border-LegonGold disabled:cursor-default disabled:bg-white' />
+                      </div>
+                      
+                      <div className='mb-2.5 block  text-LegonText'>
+                        <label className='mb-2.5 block font-medium text-black '>Something</label>
+                        <input type='text' placeholder='Something' className='w-full rounded border-[1.5px] bg-transparent py-3 px-5 font-medium outline-none transition focus:border-LegonGold active:border-LegonGold disabled:cursor-default disabled:bg-white' />
+                      </div>
+
+                      <div className='mb-4.5'>
+                        <label className='mb-2.5 block font-medium text-LegonText'>Something</label>
+                        <div  className='relative z-20 bg-transparent text-LegonText'>
+                          <select className='relative z-20 w-full appearance-none rounded border border-LegonContainer bg-transparent py-3 px-5 outline-none transition focus:border-LegonGold active:border-LegonGold'>
+                            <option value=''>Select an option from here*</option>
+                            <option value=''>#1</option>
+                            <option value=''>#2</option>
+                            <option value=''>#3</option>
+                          </select>
+                          <span className='absolute top-1/2 right-4 z-30 -translate-y-1/2'><VscChevronDown className='fill-current' size={24} /></span>
+                        </div>
+                      </div>
+                      
+                      <div className='mb-6'>
+                        <label className='mb-2.5 block font-medium text-LegonText'>Text Area</label>
+                        <textarea rows='6' placeholder='Type your message' className='w-full rounded border-[1.5px] border-LegonContainer bg-transparent py-3 px-5 font-medium outline-none transition focus:border-LegonGold active:border-LegonGold disabled:cursor-default disabled:bg-LegonContainer'></textarea>
+                      </div>
+
+                      <div className='mb-2.5 block'>
+                        <label className='mb-2.5 block font-medium text-LegonText'> Date Picker</label>
+                        <input type='date' className='w-full rounded border-[1.5px] bg-transparent py-3 px-5 font-medium outline-none transition focus:border-LegonGold active:border-LegonGold disabled:cursor-default disabled:bg-white' />
+                        
+                      </div>
+
+                      <div className='mb-2.5 block'>
+                        <label className='mb-2.5 block font-medium text-LegonText'>Something</label>
+                        <div className='mb-2.5 flex justify-center rounded-lg border border-dashed border-LegonText px6 py-10'>
+                        <div className='text-center'>
+                          <VscFolderLibrary className='mx-auto h-12 w-12 text-LegonBlue '/>
+                          <div className="mt-4 flex text-sm leading-6 text-LegonText">
+                            <label className="relative cursor-pointer rounded-md bg-white font-semibold text-LegonBlue focus-within:outline-none focus-within:ring-2 focus-within:ring-LegonGold focus-within:ring-offset-2 hover:text-LegonGold">
+                              <span>Upload Project</span>
+                              <input id="file-upload" name="file-upload" type="file" className="sr-only"/>
+                            </label>
+                            <p className='pl-1'>Or drag and drop</p>
+                          </div>
+                          <p className='text-xs leading-5 text-LegonText'>PNG, JPG, GIF up to 10MB</p>
+                        </div>
+                        </div>
+                      </div>
+
+                      {/* <div className='mb-2.5 block'>
+                        <label className='mb-2.5  font-medium text-LegonText flex cursor-pointer select-none items-center'> Date Picker</label>
+                        <input type='radio' className='mb-2.5 rounded border-[1.5px] bg-transparent py-3 px-5 font-medium outline-none transition focus:border-LegonGold active:border-LegonGold disabled:cursor-default disabled:bg-white' /> something
+                        <input type='checkbox' className='mb-2.5 rounded border-[1.5px] bg-transparent py-3 px-5 font-medium outline-none transition focus:border-LegonGold active:border-LegonGold disabled:cursor-default disabled:bg-white' /> Something
+                      </div> */}
+
+<div className='mb-2.5 block'>
+  <label className='mb-2.5  font-medium text-LegonText flex cursor-pointer select-none items-center'>
+    Date Picker
+  </label>
+  <div className="flex mb-2.5">
+    <input
+      type='radio'
+      className='mb-2.5 rounded border-[1.5px] bg-transparent py-3 px-5 font-medium outline-none transition focus:border-LegonGold active:border-LegonGold disabled:cursor-default disabled:bg-white'
+    />
+    <span className="ml-2.5">Something</span>
+  </div>
+  <div className="flex">
+    <input
+      type='checkbox'
+      className='mb-2.5 rounded border-[1.5px] bg-transparent py-3 px-5 font-medium outline-none transition focus:border-LegonGold active:border-LegonGold disabled:cursor-default disabled:bg-white'
+    />
+    <span className="ml-2.5">Something</span>
+  </div>
+</div>
+
+                    
+                    <button className='flex w-full justify-center rounded bg-LegonGold p-3 font-medium'>Send Messsage</button>
+                  </div>
+
+                
+                </form>
+            </div>
+          </div>
+        </div>
+
