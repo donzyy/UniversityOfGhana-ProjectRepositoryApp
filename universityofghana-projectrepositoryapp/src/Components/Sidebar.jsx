@@ -1,7 +1,7 @@
 import React,{useState, useEffect, useRef} from 'react'
 import SidebarLinkGroup from './SidebarLinkGroup'
 import { NavLink, useLocation } from 'react-router-dom'
-import {VscFileZip, VscArchive, VscLaw, VscMortarBoard, VscCloud, VscNotebookTemplate, VscPreview, VscChevronDown, VscDashboard, VscChevronLeft } from "react-icons/vsc";
+import {VscFileZip, VscArchive, VscLaw, VscMortarBoard, VscCloud, VscNotebookTemplate, VscPreview, VscChevronDown, VscDashboard, VscChevronLeft, VscCommentUnresolved } from "react-icons/vsc";
 
 
 const Sidebar =({ sidebarOpen, setSidebarOpen }) => {
@@ -152,6 +152,12 @@ const Sidebar =({ sidebarOpen, setSidebarOpen }) => {
               <NavLink to='/assignedstudents' className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-LegonBlue duration-300 ease-in-out hover:bg-LegonGold ${pathname.includes('assignedstudents') && 'bg-LegonGold'}`}>
                   <VscMortarBoard className='flex fill-current' size={20} />
                   Supervised Students
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to='/commentaryandrating' className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-LegonBlue duration-300 ease-in-out hover:bg-LegonGold ${pathname.includes('commentaryandrating') && 'bg-LegonGold'}`}>
+                  <VscCommentUnresolved className='flex fill-current' size={20} />
+                  Evaluation and Comments
               </NavLink>
             </li>
             {/* <!-- Lecturer Item List --> */}

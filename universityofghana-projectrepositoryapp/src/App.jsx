@@ -16,6 +16,9 @@ import PrivateRoutes from "./Components/PrivateRoutes"
 import StudentPrivateRoutes from "./Components/StudentPrivateRoutes"
 import ResearcherPrivateRoutes from "./Components/ResearcherPrivateRoutes"
 import LecturerPrivateRoutes from "./Components/LecturerPrivateRoutes"
+import AdminAnalytics from "./Dashboard/Adminanalytics"
+import AdminPrivateRoute from "./Components/AdminPrivateRoute"
+import EvalutionAndComments from "./Pages/LecturerMenu/EvalutionAndComments"
 
 
 function App() {
@@ -47,8 +50,12 @@ function App() {
         <Route path="/lecturermenu/approvedprojects" element = { <ApprovedStatus/> } />
         <Route path="/lecturermenu/unapprovedprojects" element = { <UnapprovedStatus/> } />
         <Route path="/assignedstudents" element = { <SupervisedStudents/> } />
+        <Route path="/commentaryandrating" element={<EvalutionAndComments/>} />
         </Route>
 
+        <Route element={<AdminPrivateRoute/>}>
+        <Route path="/admin" element={<AdminAnalytics/>} />
+        </Route>
         
         <Route path="*" element= {<NotFound />} />
       </Routes>

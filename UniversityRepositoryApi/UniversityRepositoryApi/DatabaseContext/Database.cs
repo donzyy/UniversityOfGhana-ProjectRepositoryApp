@@ -22,6 +22,7 @@ namespace UniversityRepositoryApi.DatabaseContext
         public virtual DbSet<Supervisor> Supervisors { get; set; }
         public virtual DbSet<StudentSubmission> StudentSubmissions { get; set; }
         public virtual DbSet<DepartmentCourseCodeSupervisor> DepartmentCourseCodeSupervisors { get; set; }
+        
         public virtual DbSet<Project> Projects { get; set; }
         public virtual DbSet<ProjectSubmitted> ProjectSubmitteds { get; set; }
         public virtual DbSet<ProjectUpload> ProjectUploads { get; set; }

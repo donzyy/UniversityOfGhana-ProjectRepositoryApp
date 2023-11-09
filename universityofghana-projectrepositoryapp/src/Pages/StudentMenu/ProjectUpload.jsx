@@ -3,6 +3,7 @@ import { VscChevronDown, VscFolderLibrary} from "react-icons/vsc";
 import DefaultLayout from '../../Layout/DefaultLayout';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import StudentLayout from '../../Layout/StudentLayout';
 
 
 function ProjectUpload() {
@@ -40,7 +41,9 @@ function ProjectUpload() {
     Submission_Date: dateFormat() ,
     Submission_Status: 'Pending',
     Project_File_Name: null,
-    Project_File:  null
+    Project_File:  null,
+    Supervisor_Commentary: ' ',
+    Supervisor_Rating: 0
   });
 
 
@@ -109,7 +112,7 @@ function ProjectUpload() {
 
   return (
     
-    <DefaultLayout>
+    <StudentLayout>
       <div className='overflow-hidden rounded-sm border border-LegonContainer bg-white shadow-default'>
         <div className='px-4 pb-6 text-center lg:pb-8 xl:pb-11.5'>
 
@@ -313,7 +316,7 @@ function ProjectUpload() {
         </div>
 
       </div>
-    </DefaultLayout>
+    </StudentLayout>
   )
 }
 

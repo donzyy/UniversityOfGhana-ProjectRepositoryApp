@@ -29,8 +29,11 @@ namespace UniversityRepositoryApi.Model
         public string Project_File_Name { get; set; }
         public DateTime Submission_Date { get; set; }
         public string Submission_Status { get; set; }
+        public string Supervisor_Commentary { get; set; }
+        public int Supervisor_Rating { get; set; }
 
         [NotMapped]
         public IFormFile Project_File { get; set; }
+
     }
 }

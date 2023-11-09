@@ -126,6 +126,39 @@ namespace UniversityRepositoryApi.Controllers
             return NoContent();
         }
 
+        [HttpPut("{id}/commentaryandrating")]
+        public async Task<IActionResult>UpdateCommentaryAndRating (int id, string commentary, int rating)
+        {
+            var SupervisorCommentaryAndRating = await _context.StudentSubmissions.FindAsync(id);
+
+            if (SupervisorCommentaryAndRating == null)
+            {
+                return NotFound();
+            }
+
+            SupervisorCommentaryAndRating.Supervisor_Commentary = commentary;
+            SupervisorCommentaryAndRating.Supervisor_Rating = rating;
+
+            try
+            {
+                _context.StudentSubmissions.Update(SupervisorCommentaryAndRating);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!studentSubmissionExist(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            
+            return NoContent();
+        }
+
         private bool studentSubmissionExist(int id)
         {
             return _context.StudentSubmissions.Any(e => e.Student_Submission_ID == id);

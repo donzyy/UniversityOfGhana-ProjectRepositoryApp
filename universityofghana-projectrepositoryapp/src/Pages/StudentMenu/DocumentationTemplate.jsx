@@ -2,6 +2,7 @@ import React from 'react'
 import DefaultLayout from '../../Layout/DefaultLayout'
 import { VscChevronDown, VscCloudDownload } from 'react-icons/vsc'
 import Swal from 'sweetalert2'
+import StudentLayout from '../../Layout/StudentLayout'
 
 
 function DocumentationTemplate() {
@@ -40,7 +41,7 @@ function DocumentationTemplate() {
   }
 
   return (
-    <DefaultLayout>
+    <StudentLayout>
         <div className='overflow-hidden rounded-sm border border-LegonContainer bg-white shadow-default'>
 
           <div className='px-4 pb-6 text-center lg:pb-8 xl:pb-11.5'>
@@ -510,7 +511,7 @@ function DocumentationTemplate() {
           </div>
 
         </div>
-    </DefaultLayout>
+    </StudentLayout>
   )
 }
 

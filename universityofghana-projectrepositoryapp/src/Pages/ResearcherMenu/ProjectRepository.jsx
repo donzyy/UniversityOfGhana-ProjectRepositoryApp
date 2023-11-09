@@ -2,10 +2,11 @@ import React from 'react'
 import DefaultLayout from '../../Layout/DefaultLayout'
 import ProjectSideFilter from '../../Components/ProjectSideFilter'
 import ProjectListing from '../../Components/ProjectListing'
+import ResearcherLayout from '../../Layout/ResearcherLayout'
 
 function ProjectRepository() {
   return (
-    <DefaultLayout>
+    <ResearcherLayout>
         <div className='overflow-hidden rounded-sm border border-LegonContainer bg-white shadow-default'>
           <div className='px-4 pb-6 text-center lg:pb-8 xl:pb-11.5'>
 
@@ -27,7 +28,7 @@ function ProjectRepository() {
           
 
         </div>
-    </DefaultLayout>
+    </ResearcherLayout>
   )
 }
 

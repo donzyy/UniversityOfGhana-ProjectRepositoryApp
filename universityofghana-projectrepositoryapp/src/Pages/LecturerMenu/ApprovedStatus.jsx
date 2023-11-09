@@ -3,6 +3,7 @@ import DefaultLayout from '../../Layout/DefaultLayout'
 import { VscFeedback, VscLibrary } from 'react-icons/vsc'
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import SupervisorLayout from '../../Layout/SupervisorLayout';
 
 
 function ApprovedStatus() {
@@ -63,7 +64,7 @@ function ApprovedStatus() {
       }
 
   return (
-    <DefaultLayout>
+    <SupervisorLayout>
         <div className='rounded-sm border border-LegonContainer bg-white px-5 pt-6 pb-2.5 shadow-default sm:px-7.5 xl:pb-1'>
           <div className='max-w-full overflow-x-auto'>
             <div className='py-6 px4 md:px-6 xl:px-7.5'>
@@ -120,7 +121,7 @@ function ApprovedStatus() {
           </div>
         </div>
         
-    </DefaultLayout>
+    </SupervisorLayout>
   )
 }
 

@@ -259,6 +259,12 @@ namespace UniversityRepositoryApi.Migrations
                     b.Property<string>("Submission_Status")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Supervisor_Commentary")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Supervisor_Rating")
+                        .HasColumnType("int");
+
                     b.Property<int>("Supervisor_Value")
                         .HasColumnType("int");
 

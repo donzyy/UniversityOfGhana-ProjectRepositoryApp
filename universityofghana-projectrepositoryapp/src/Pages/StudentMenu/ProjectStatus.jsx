@@ -3,6 +3,7 @@ import { VscLink } from "react-icons/vsc"
 
 import DefaultLayout from '../../Layout/DefaultLayout'
 import axios from 'axios';
+import StudentLayout from '../../Layout/StudentLayout';
 
 
 function ProjectStatus() {
@@ -43,7 +44,7 @@ function ProjectStatus() {
   }
 
   return (
-    <DefaultLayout>
+    <StudentLayout>
       <div className='overflow-hidden rounded-sm border border-LegonContainer bg-white shadow-default'>
         <div className='px-4 pb-6 text-center lg:pb-8 xl:pb-11.5'>
 
@@ -85,6 +86,16 @@ function ProjectStatus() {
 
               {submissionData.project_Description}
               </dd>
+            </div>
+
+            <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
+              <dt className='text-sm font-medium leading-6 pl-10 text-LegonText'>Supervisor Commentary:</dt>
+              <dd className='mt-1 text-sm leading-6 font-bold text-LegonText sm:col-span-2 sm:mt-0 sm:pl-30 sm:pr-10 pl-25'> {submissionData.supervisor_Commentary} </dd>
+            </div>
+
+            <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
+              <dt className='text-sm font-medium leading-6 pl-10 text-LegonText'>Supervisor Project Rating:</dt>
+              <dd className='mt-1 text-sm leading-6 font-bold text-LegonText sm:col-span-2 sm:mt-0 sm:pl-60 pl-25'> {submissionData.supervisor_Rating} out of 5 </dd>
             </div>
 
             <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
@@ -130,7 +141,7 @@ function ProjectStatus() {
         </div>
 
       </div>
-    </DefaultLayout>
+    </StudentLayout>
   )
 }
 

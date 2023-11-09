@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import DefaultLayout from '../../Layout/DefaultLayout'
-import { VscCheckAll, VscCircleSlash, VscTrash } from 'react-icons/vsc'
+import {  VscCheckAll, VscCircleSlash, VscTrash } from 'react-icons/vsc'
 import Swal from 'sweetalert2'
 import axios from 'axios';
+import SupervisorLayout from '../../Layout/SupervisorLayout';
+import ReviewModal from '../../Components/Modals/ReviewModal';
+
 
 
 
@@ -103,6 +105,8 @@ function UnapprovedStatus() {
   }
 
 
+  
+
   useEffect(() => {
     axios.get('https://localhost:5001/api/StudentSubmission/rejectedandpending')
     .then(response => {
@@ -115,7 +119,7 @@ function UnapprovedStatus() {
   
 
   return (
-    <DefaultLayout>
+    <SupervisorLayout>
         <div className='rounded-sm border border-LegonContainer bg-white px-5 pt-6 pb-2.5 shadow-default sm:px-7.5 xl:pb-1'>
           <div className='max-w-full overflow-x-auto'>
             <div className='py-6 px4 md:px-6 xl:px-7.5'>
@@ -193,16 +197,23 @@ function UnapprovedStatus() {
                         <VscTrash className='fill-current' title='Delete Project' size={18}  onClick={()=>  handleDelete(submission.student_Submission_ID)}/>
                       </button>
                     )}
+                    
+                    <ReviewModal submissionID={submission.student_Submission_ID} />
                     </div>
+                    
                   </td>
                 </tr>
                 ))}
               </tbody>
             </table>
-
+            
           </div>
         </div>
-    </DefaultLayout>
+        
+    </SupervisorLayout>
+     
+      
+    
   )
 }
 
