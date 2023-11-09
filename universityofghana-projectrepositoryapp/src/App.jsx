@@ -53,9 +53,9 @@ function App() {
         <Route path="/commentaryandrating" element={<EvalutionAndComments/>} />
         </Route>
 
-        <Route element={<AdminPrivateRoute/>}>
+        {/* <Route element={<AdminPrivateRoute/>}>
         <Route path="/admindashboard" element={<AdminAnalytics/>} />
-        </Route>
+        </Route> */}
         
         <Route path="*" element= {<NotFound />} />
       </Routes>
