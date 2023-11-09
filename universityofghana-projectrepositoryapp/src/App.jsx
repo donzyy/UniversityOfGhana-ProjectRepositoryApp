@@ -54,7 +54,7 @@ function App() {
         </Route>
 
         <Route element={<AdminPrivateRoute/>}>
-        <Route path="/admin" element={<AdminAnalytics/>} />
+        <Route path="/admindashboard" element={<AdminAnalytics/>} />
         </Route>
         
         <Route path="*" element= {<NotFound />} />

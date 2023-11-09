@@ -57,7 +57,7 @@ const handleLogin = (e) => {
            else if (userRole ==='supervisor') {
             navigate('/dashboard')
           } else if (userRole === 'admin') {
-            navigate('/admin')
+            navigate('/admindashboard')
           }
     }
   
