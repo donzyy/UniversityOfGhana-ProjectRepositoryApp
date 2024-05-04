@@ -1,0 +1,33 @@
+*Poster Presentation Template
+
+*Posterpresentation.com
+*freecam8
+*obsstudio
+
+Colors:
+ 'LegonBlue': '#00386c',
+ 'LegonGold': '#d2ac67',
+ 'LegonContainer': '#EFF4FB',
+
+
+
+-Introduction
+-Problem Statement
+-Objectivites (Specific Objective Should clearly be stated)
+-Methodology(A diagram or shcema to support your text for interactive project work.)
+-Results(This is for those who are using research)//Not usefull if you're doing interactive project work
+-Conclusions
+-Reference
+
+Video
+- A video of lenght of at most 1 minue 59 secs.(At max 5 mins)
+-Illustrate how the system fufills the objectives with explanation
+
+
+
+
+
+
+
+
+

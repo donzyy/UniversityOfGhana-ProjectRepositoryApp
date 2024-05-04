@@ -54,7 +54,6 @@ C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityReposito
 C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityRepositoryApi\UniversityRepositoryApi\obj\Debug\net5.0\staticwebassets\UniversityRepositoryApi.StaticWebAssets.Manifest.cache
 C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityRepositoryApi\UniversityRepositoryApi\obj\Debug\net5.0\scopedcss\bundle\UniversityRepositoryApi.styles.css
 C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityRepositoryApi\UniversityRepositoryApi\obj\Debug\net5.0\UniversityRepositoryApi.RazorTargetAssemblyInfo.cache
-C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityRepositoryApi\UniversityRepositoryApi\obj\Debug\net5.0\UniversityRepositoryApi.csproj.CopyComplete
 C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityRepositoryApi\UniversityRepositoryApi\obj\Debug\net5.0\UniversityRepositoryApi.dll
 C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityRepositoryApi\UniversityRepositoryApi\obj\Debug\net5.0\ref\UniversityRepositoryApi.dll
 C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityRepositoryApi\UniversityRepositoryApi\obj\Debug\net5.0\UniversityRepositoryApi.pdb
@@ -178,3 +177,5 @@ C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityReposito
 C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityRepositoryApi\UniversityRepositoryApi\obj\Debug\net5.0\staticwebassets\msbuild.build.UniversityRepositoryApi.props
 C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityRepositoryApi\UniversityRepositoryApi\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.UniversityRepositoryApi.props
 C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityRepositoryApi\UniversityRepositoryApi\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.UniversityRepositoryApi.props
+C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityRepositoryApi\UniversityRepositoryApi\obj\Debug\net5.0\UniversityRepositoryApi.sourcelink.json
+C:\Users\Danie\Desktop\UniversityOfGhana-ProjectRepositoryApp\UniversityRepositoryApi\UniversityRepositoryApi\obj\Debug\net5.0\Universi.2675F399.Up2Date

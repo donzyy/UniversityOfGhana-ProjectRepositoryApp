@@ -26,6 +26,11 @@ namespace UniversityRepositoryApi.Model
         public int CourseCode_Value { get; set; }
         public string Project_Title { get; set; }
         public string Project_Description { get; set; }   
+        
+        /* [StringLength(50, MinimumLength = 3,
+        ErrorMessage = "First Name should be minimum 3 characters and a maximum of 50 characters")]
+        [DataType(DataType.Text)]
+        public string FirstName { get; set; } */
         public string Project_File_Name { get; set; }
         public DateTime Submission_Date { get; set; }
         public string Submission_Status { get; set; }
